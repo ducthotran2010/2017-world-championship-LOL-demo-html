@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hompage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style media="screen">
+
+  #background {
+    position: fixed;
+    top:50%;
+    left:50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+
+
+
+  @-webkit-keyframes background-black {
+    from { opacity: 0; }
+    to { opacity: 0.3; }
+  }
+  @keyframes background-black {
+    from { opacity: 0; }
+    to { opacity: 0.3; }
+  }
+  #background-black {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 80%;
+    min-height: 80%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    background-color: black;
+    opacity: 0.3;
+    -webkit-animation-name: background-black;
+    -webkit-animation-duration: 4s;
+    animation-name: background-black;
+    animation-duration: 4s;
+  }
+
+
+
+  @-webkit-keyframes animate-appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes animate-appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .center-content {
+    position: fixed;
+    top:50%;
+    left:50%;
+    width: 80%;
+    height: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border:5px solid red;
+    -webkit-animation-name: animate-appear;
+    -webkit-animation-duration: 4s;
+    animation-name: animate-appear;
+    animation-duration: 4s;
+    text-align: center;
+  }
+  .center-content > a {
+    display: block;
+  }
+  .center-content img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+  .center-content button {
+    padding: 10px 170px;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  </style>
+</head>
+<body>
+  <video autoplay loop muted id="background">
+    <source src="src/video/bgvideo.mp4" type="video/mp4">
+    </video>
+    <div id="background-black"></div>
+    <div class="center-content" id="list">
+      <a href="#"><button type="button" class="btn btn-success">Thể Thức Chung Kết Thế Giới 2017</button></a>
+      <!-- <img src="src/images/teams/GM.png" alt="">
+      <img src="src/images/teams/GM.png" alt="">
+      <img src="src/images/teams/GM.png" alt="">
+      <img src="src/images/teams/GM.png" alt="">
+      <img src="src/images/teams/GM.png" alt="">
+      <img src="src/images/teams/GM.png" alt="">
+      <img src="src/images/teams/GM.png" alt="">
+      <img src="src/images/teams/GM.png" alt=""> -->
+    </div>
+  <script>
+  $(document).ready(function(){
+    var contenttxt = [
+      ["#1 Seed from LCK",   "Longzhu Gaming",   "#", "src/images/teams/LZ.png"],
+      ["#1 Seed from LPL",   "EDward Gaming",    "#", "src/images/teams/EDG.png"],
+      ["#1 Seed from EULCS", "G2 Esports",       "#", "src/images/teams/G2.png"],
+      ["#1 Seed from LMS",   "Flash Wolves",     "#", "src/images/teams/FW.png"],
+      ["#2 Seed from LCK",   "SK Telecom T1",    "#", "src/images/teams/SKT.png"],
+      ["#3 Seed from LCK",   "Samsung Galaxy",   "#", "src/images/teams/SG.png"],
+      ["#2 Seed from LPL",   "Royal Never Give Up","#","src/images/teams/RNG.png"],
+      ["#1 Seed from NALCS", "Team Solomid",     "#", "src/images/teams/TSM.png"],
+      ["#2 Seed from NALCS", "Immortals",        "#", "src/images/teams/IMT.png"],
+      ["#2 Seed from EULCS", "Misfits",          "#", "src/images/teams/MF.png"],
+      ["#2 Seed from LMS", "ahq e-Sports Club",  "#", "src/images/teams/AHQ.png"],
+      ["#1 Seed from GPL", "GIGABYTE Marines",  "#", "src/images/teams/GM.png"],
+      ["Winner of Match A",  "Cloud9",           "#", "src/images/teams/C9.png"],
+      ["Winner of Match B",  "Fnatic",           "#", "src/images/teams/FNC.png"],
+      ["Winner of Match C",  "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png"],
+      ["Winner of Match D",  "Team WE",          "#", "src/images/teams/WE.png"],
+      ["#3 Seed from LMS",    "HK Attitude",      "#", "src/images/teams/HKA.png"],
+      ["Winner of CBLoL",     "Team oNe eSports", "#", "src/images/teams/TOE.png"],
+      ["Winner of LJL",       "Rampage",          "#", "src/images/teams/RMP.png"],
+      ["Winner of OPL",       "LG Dire Wolves",   "#", "src/images/teams/DW.png"],
+      ["#2 Seed GPL",         "Young Generation", "#", "src/images/teams/YG.png"],
+      ["Winner of LCL",       "Gambit.CIS",       "#", "src/images/teams/G-CIS.png"],
+      ["Winner of CLS",       "Kaos Latin Gamers","#", "src/images/teams/KLG.png"],
+      ["Winner of LLN",       "Lyon Gaming",      "#", "src/images/teams/LG.png"],
+    ];
+    for (var i = 0; i < contenttxt.length; i++) {
+      var myImg = document.createElement("img");
+      myImg.src = contenttxt[i][3];
+      document.getElementById("list").appendChild(myImg);
+    }
+  });
+  </script>
+  </body>
+  </html>
