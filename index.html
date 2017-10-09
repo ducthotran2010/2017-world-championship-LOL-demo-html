@@ -1,386 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>2017 Thể Thức Chung Kết Thế Giới</title>
-  <link rel="icon" href="src/images/nav/icon-web.png">
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="src/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Hompage</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="src/js/bootstrap.min.js"></script>
-
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
-
-
-  <link rel="stylesheet" href="src/css/fade-slider.css">
-
-  <style>
-  html {
-    background: url(src/images/bg-main.jpg) fixed;
-  }
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style media="screen">
   body {
-    position: relative;
-    background: url(src/images/dot.png) repeat;
+    background-color: black;
+  }
+  .background {
+    position: fixed;
+    top:50%;
+    left:50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
   }
 
-  /*---------------NAVBAR---------------*/
-  .affix {
-    top: 0;
-    width: 100%;
-    z-index: 9999;
+  .logo {
+    width:10%;
+    margin-top:100px;
+    transition: width .5s;
   }
-  .affix ~ .container-fluid {
-    position: relative;
-    top: 50px;
+  .logo:hover {
+    width: 13%;
   }
-  .navbar {
-    margin-bottom: 0px;
-    font-size: 24px;
-    font-family: ".VnHelvetInsH";
+
+  .content {
+    /*border: 4px solid red;*/
+    background: radial-gradient(black 15%, transparent);rgba(10, 10, 10, 0.5);
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+  }
+  .content h3 p {
+    cursor:default;
+    color: silver;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    /*padding-top: 0;*/
+    border-bottom: 1px solid silver;
+    display: inline-block;
+    transition: font-size .5s;
+  }
+  .content h3 p:hover {
+    font-size: 35px;
+  }
+  .content h3 p span {
+    color: #e10000;
     text-transform: uppercase;
   }
-  .navbar .navbar-nav {
-    display: inline-block;
-    float: none;
+  .content #list img {
+    width: 70px;
+    height: 70px;
+    margin: 0.5% 2%;
+    /*padding: 10px;*/
+    opacity: 0.7;
+    transition: opacity .5s, width .5s, height .5s, background .5s;
   }
-  .navbar .navbar-collapse {
-    text-align: center;
+  .content #list img:hover {
+    width: 90px;
+    height: 90px;
+    opacity: 1;
+    background-image: radial-gradient(50% 50%,#5d5d5d,rgba(93,93,93,0));
   }
-
-  header {background-color: black;}
-  header img {
-    width: 80%;
-    margin: 0px auto;
-    max-height: 490px;
-  }
-
-  /*-----------------------------------*/
-
-  /*#play-in-stage {}
-  #group-stage {}
-  #winners-stage {}*/
-
-  marquee {
-    background-color: silver;
-    font-size: 24px;
-    padding: 5px;
-    font-family: "";
-  }
-  .container-custom {
-    /*display: block;*/
-    margin: 0px auto;
-    max-width: 1140px;
-    width: 100%;
-  }
-  .white-theme {
-    background-color: #FFFFF1;
-    color: black;
-    margin: 0;
-  }
-
-  .black-theme {
-    background-color: black;
-    color: white;
-    margin: 0;
-  }
-  /* ------------------------ CONTENT--------------------*/
-  .box-team {
-    margin: 10px 2vw;
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .team {
-    background-color: silver;
-    margin: 0.5vw;
-    display: inline-block;
-    border: 2px solid #DDD;
-    text-align: center;
-    max-width: 220px;
-    width: 100%;
-  }
-  /*----------TAG H3-----------*/
-  h3 {
-    font-family: "MTO  Astro City";
-  }
-  .white-theme h3 {
-    font-weight:bold;
-    border-bottom: 4px solid black;
-  }
-  .black-theme h3 {
-    font-weight:bold;
-    border-bottom: 4px solid silver;
-  }
-  /*----------TITLE----------*/
-  .white-theme span {
-    padding: 10px;
-    color: white;
-    position: relative;
-    background-color: black;
-    display: inline-block;
-  }
-  .black-theme span {
-    padding: 10px;
-    color: black;
-    position: relative;
-    background-color: silver;
-    display: inline-block;
-  }
-  /*-------TAG H1-------*/
-  h1 {
-    padding: 20px;
-    font-weight: bold;
-    text-align: center;
-  }
-
-  blockquote {
-    margin: 10px 2vw;
-  }
-
-  /*------- TAG A-------*/
-  .box-team .team a {
-    font-weight: bold;
-    display: block;
-    padding: 5px;
-    background-color: black;
-  }
-
-  .box-team .team p {
-    margin: 0px 0px;
-    padding: 5px;
-    color: black;
-  }
-  .box-team .team img {
-    margin: 10px;
+  .btn{
+    background-color: transparent;
+    font-family: "Consolas";
   }
   </style>
 </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="100">
-
-  <header>
-    <div id="myCarousel" class="carousel slide carousel-fade" data-interval="4000">
-      <div class="carousel-inner">
-        <div class="active item">
-          <img src="src/images/banner/banner-1.jpg" alt="">
-        </div>
-        <div class="inactive item">
-          <img src="src/images/banner/banner-2.jpg" alt="">
-        </div>
-        <div class="item">
-          <img src="src/images/banner/banner-3.jpg" alt="">
-        </div>
-      </div>
-    </div>
-  </header>
-  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-    <div class="container-fluid">
-
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">
-          <img src="src/images/nav/icon-web.png" width="32px" height="32px" alt="">
-        </a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="#play-in-stage">play-in stage</a></li>
-          <li><a href="#group-stage">Group stage</a></li>
-          <li><a href="#winners-stage">Winners stage</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-
-  <marquee scrollamount="15">VÒNG BẢNG CHUNG KẾT THẾ GIỚI 2017 ĐANG DIỄN RA</marquee>
-  <div class="container-custom">
-    <div class="white-theme" id="play-in-stage">
-      <h1>VÒNG KHỞI ĐỘNG</h1>
-      <h3><span>Giới thiệu</span></h3>
-      <blockquote>
-        <p>Vòng khởi động là giai đoạn đầu tiên, đây là cuộc tranh đấu của 12 đội tuyển nhằm giành 4 suất tiến vào vòng bảng.</p>
-        <p>Vòng khởi động của Chung Kết Thế Giới 2017 sẽ khởi tranh từ ngày 23.09, trận đấu đầu tiên bắt đầu lúc 12:00 và được trực tiếp trên VETV.</p>
-        <footer>BLV Hoàng Luân</footer>
-      </blockquote>
-      <h3><span>Các đội tham dự</span></h3>
-      <div class="box-team" id="box-team-playin"></div>
-      <h3>Các đội chiến thắng vòng khởi động</h3>
-      <div class="box-team" id="box-team-winners-playin"></div>
-
-      <script>
-      $(document).ready(function(){
-        var contenttxt = [
-          ["Winner of Match A",  "Cloud9",           "#", "src/images/teams/C9.png"],
-          ["Winner of Match B",  "Fnatic",           "#", "src/images/teams/FNC.png"],
-          ["Winner of Match C",       "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png"],
-          ["Winner of Match D",    "Team WE",          "#", "src/images/teams/WE.png"],
-        ];
-        for (var i = 0; i < contenttxt.length; i++) {
-          var item = document.createElement("div");
-          item.className = "team";
-          document.getElementById("box-team-winners-playin").appendChild(item);
-
-          var nametagP = document.createElement("p");
-          var contentP = document.createTextNode(contenttxt[i][0]);
-          nametagP.appendChild(contentP);
-          item.appendChild(nametagP);
-
-          var nametagA = document.createElement("a");
-          var contentA = document.createTextNode(contenttxt[i][1]);
-          nametagA.appendChild(contentA);
-          nametagA.href = contenttxt[i][2];
-          item.appendChild(nametagA);
-
-          var nametagImg = document.createElement("img");
-          nametagImg.src = contenttxt[i][3];
-          item.appendChild(nametagImg);
-        }
-      });
-
-      </script>
-      <script>
-      $(document).ready(function(){
-        var contenttxt = [
-          ["#3 Seed from LPL",    "Team WE",          "#", "src/images/teams/WE.png"],
-          ["#3 Seed from NACLS",  "Cloud9",           "#", "src/images/teams/C9.png"],
-          ["#3 Seed from EULCS",  "Fnatic",           "#", "src/images/teams/FNC.png"],
-          ["#3 Seed from LMS",    "HK Attitude",      "#", "src/images/teams/HKA.png"],
-          ["Winner of CBLoL",     "Team oNe eSports", "#", "src/images/teams/TOE.png"],
-          ["Winner of LJL",       "Rampage",          "#", "src/images/teams/RMP.png"],
-          ["Winner of OPL",       "LG Dire Wolves",   "#", "src/images/teams/DW.png"],
-          ["#2 Seed GPL",         "Young Generation", "#", "src/images/teams/YG.png"],
-          ["Winner of TCL",       "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png"],
-          ["Winner of LCL",       "Gambit.CIS",       "#", "src/images/teams/G-CIS.png"],
-          ["Winner of CLS",       "Kaos Latin Gamers","#", "src/images/teams/KLG.png"],
-          ["Winner of LLN",       "Lyon Gaming",      "#", "src/images/teams/LG.png"],
-        ];
-
-        for (var i = 0; i < contenttxt.length; i++) {
-          var item = document.createElement("div");
-          item.className = "team";
-          document.getElementById("box-team-playin").appendChild(item);
-
-          var nametagP = document.createElement("p");
-          var contentP = document.createTextNode(contenttxt[i][0]);
-          nametagP.appendChild(contentP);
-          item.appendChild(nametagP);
-
-          var nametagA = document.createElement("a");
-          var contentA = document.createTextNode(contenttxt[i][1]);
-          nametagA.appendChild(contentA);
-          nametagA.href = contenttxt[i][2];
-          item.appendChild(nametagA);
-
-          var nametagImg = document.createElement("img");
-          nametagImg.src = contenttxt[i][3];
-          item.appendChild(nametagImg);
-        }
-      });
-      </script>
-
+<body>
+  <video autoplay loop muted class="background">
+    <source src="src/video/bgvideo.mp4" type="video/mp4">
+    </video>
+    <div class="background content">
+      <img src="src/images/hp-logo.png" class="logo" alt="">
+      <h3>
+        <p><span>24 đội tuyển</span> đã có mặt tại <span>Chung Kết Thế Giới 2017</span></p>
+      </h3>
+      <div id="list"></div>
+      <a href="rule.html" type="button" class="btn btn-danger btn-lg" name="button" style="margin-top:20px;">Thể thức Chung Kết Thế Giới Mùa 7</a>
     </div>
 
-    <div class="black-theme" id="group-stage">
-      <h1>VÒNG BẢNG</h1>
-      <h3><span>Giới thiệu</span></h3>
-      <blockquote cite="">
-        <p>Vòng bảng là giai đoạn chuyển giao đến vòng loại trực tiếp của Chung Kết Thế Giới 2017.</p>
-        <p>Vòng bảng tổng cộng có 16 đội:</p>
-        <ul>
-          <li>3 đội Hàn Quốc</li>
-          <li>2 đội từ mỗi khu vực: Trung Quốc (CN), Châu Âu (EU), Đài Loan - Hong Kong - Macau (LMS), Bắc Mỹ (NA)</li>
-          <li>1 đội chưa biết phụ thuộc vào kết quả MSI 2017</li>
-          <li>4 đội chiến thắng từ vòng khởi động</li>
-        </ul>
-        <footer>Nguồn: lienminh360.vn</footer>
-      </blockquote>
-      <h3><span>Các đội tham dự</span></h3>
-      <div class="box-team" id="box-team-group-stage"></div>
-      <script>
-
-      $(document).ready(function(){
-        var contenttxt = [
-          ["#1 Seed from LCK",   "Longzhu Gaming",   "#", "src/images/teams/LZ.png"],
-          ["#1 Seed from LPL",   "EDward Gaming",    "#", "src/images/teams/EDG.png"],
-          ["#1 Seed from EULCS", "G2 Esports",       "#", "src/images/teams/G2.png"],
-          ["#1 Seed from LMS",   "Flash Wolves",     "#", "src/images/teams/FW.png"],
-          ["#2 Seed from LCK",   "SK Telecom T1",    "#", "src/images/teams/SKT.png"],
-          ["#3 Seed from LCK",   "Samsung Galaxy",   "#", "src/images/teams/SG.png"],
-          ["#2 Seed from LPL",   "Royal Never Give Up","#","src/images/teams/RNG.png"],
-          ["#1 Seed from NALCS", "Team Solomid",     "#", "src/images/teams/TSM.png"],
-          ["#2 Seed from NALCS", "Immortals",        "#", "src/images/teams/IMT.png"],
-          ["#2 Seed from EULCS", "Misfits",          "#", "src/images/teams/MF.png"],
-          ["#2 Seed from LMS", "ahq e-Sports Club",  "#", "src/images/teams/AHQ.png"],
-          ["#1 Seed from GPL", "GIGABYTE Marines",  "#", "src/images/teams/GM.png"],
-          ["Winner of Match A",  "Cloud9",           "#", "src/images/teams/C9.png"],
-          ["Winner of Match B",  "Fnatic",           "#", "src/images/teams/FNC.png"],
-          ["Winner of Match C",  "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png"],
-          ["Winner of Match D",  "Team WE",          "#", "src/images/teams/WE.png"],
-        ];
-        for (var i = 0; i < contenttxt.length; i++) {
-          var item = document.createElement("div");
-          item.className = "team";
-          document.getElementById("box-team-group-stage").appendChild(item);
-
-          var nametagP = document.createElement("p");
-          var contentP = document.createTextNode(contenttxt[i][0]);
-          nametagP.appendChild(contentP);
-          item.appendChild(nametagP);
-
-          var nametagA = document.createElement("a");
-          var contentA = document.createTextNode(contenttxt[i][1]);
-          nametagA.appendChild(contentA);
-          nametagA.href = contenttxt[i][2];
-          item.appendChild(nametagA);
-
-          var nametagImg = document.createElement("img");
-          nametagImg.src = contenttxt[i][3];
-          item.appendChild(nametagImg);
-        }
-      });
-      </script>
-    </div>
-
-    <div class="white-theme" id="winners-stage">
-      <h1>VÒNG LOẠI TRỰC TIẾP</h1>
-      <h3><span>Giới thiệu</span></h3>
-      <blockquote>
-        Vòng loại trực tiếp sẽ có 8 đội tham dự và chia làm 3 giai đoạn:
-        <ul>
-          <li>Tứ kết</li>
-          <li>Bán kết</li>
-          <li>Chung kết</li>
-        </ul>
-        Thông qua đó chúng ta sẽ tìm được ngôi vô địch Chung Kết Thế Giới 2017.
-        <footer>Unnamed</footer>
-      </blockquote>
-      <h3><span>Các đội tham dự</span></h3>
-      <div style="text-align:center;">
-        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-        <p>Vẫn đang chờ kết quả</p>
-      </div>
-    </div>
-  </div>
 
   <script>
-  $('#myCarousel').carousel();
   $(document).ready(function(){
-    $(".navbar").affix({offset: {top: $("header").outerHeight(true)} });
+    var contenttxt = [
+      ["#1 Seed from LCK",   "Longzhu Gaming",   "#", "src/images/teams/LZ.png"],
+      ["#1 Seed from LPL",   "EDward Gaming",    "#", "src/images/teams/EDG.png"],
+      ["#1 Seed from EULCS", "G2 Esports",       "#", "src/images/teams/G2.png"],
+      ["#1 Seed from LMS",   "Flash Wolves",     "#", "src/images/teams/FW.png"],
+      ["#2 Seed from LCK",   "SK Telecom T1",    "#", "src/images/teams/SKT.png"],
+      ["#3 Seed from LCK",   "Samsung Galaxy",   "#", "src/images/teams/SG.png"],
+      ["#2 Seed from LPL",   "Royal Never Give Up","#","src/images/teams/RNG.png"],
+      ["#1 Seed from NALCS", "Team Solomid",     "#", "src/images/teams/TSM-w.png"],
+      ["#2 Seed from NALCS", "Immortals",        "#", "src/images/teams/IMT.png"],
+      ["#2 Seed from EULCS", "Misfits",          "#", "src/images/teams/MF.png"],
+      ["#2 Seed from LMS", "ahq e-Sports Club",  "#", "src/images/teams/AHQ.png"],
+      ["#1 Seed from GPL", "GIGABYTE Marines",  "#", "src/images/teams/GM.png"],
+      ["Winner of Match A",  "Cloud9",           "#", "src/images/teams/C9.png"],
+      ["Winner of Match B",  "Fnatic",           "#", "src/images/teams/FNC.png"],
+      ["Winner of Match C",  "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png"],
+      ["Winner of Match D",  "Team WE",          "#", "src/images/teams/WE.png"],
+      ["#3 Seed from LMS",    "HK Attitude",      "#", "src/images/teams/HKA.png"],
+      ["Winner of CBLoL",     "Team oNe eSports", "#", "src/images/teams/TOE.png"],
+      ["Winner of LJL",       "Rampage",          "#", "src/images/teams/RMP.png"],
+      ["Winner of OPL",       "LG Dire Wolves",   "#", "src/images/teams/DW.png"],
+      ["#2 Seed GPL",         "Young Generation", "#", "src/images/teams/YG.png"],
+      ["Winner of LCL",       "Gambit.CIS",       "#", "src/images/teams/G-CIS.png"],
+      ["Winner of CLS",       "Kaos Latin Gamers","#", "src/images/teams/KLG.png"],
+      ["Winner of LLN",       "Lyon Gaming",      "#", "src/images/teams/LG.png"],
+    ];
+    for (var i = 0; i < contenttxt.length; i++) {
+      var tagnameA = document.createElement("a");
+      tagnameA.href = contenttxt[i][2];
+      document.getElementById("list").appendChild(tagnameA);
+
+      var myImg = document.createElement("img");
+      myImg.src = contenttxt[i][3];
+      tagnameA.appendChild(myImg);
+    }
   });
   </script>
-
-  <footer  style="height:200px; background-color:black">
-
-  </footer>
-
-</body>
-</html>
+  </body>
+  </html>
