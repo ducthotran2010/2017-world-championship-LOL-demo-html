@@ -35,6 +35,8 @@ nav a {
   padding: 23px 0 11px 0;
   position: relative;
   font-family: "Adobe Garamond Pro",Garamond,Baskerville,"Baskerville Old Face","Hoefler Text","Times New Roman",serif;
+  /*background: none;*/
+  /*transition: background .1s;*/
 }
 nav a:hover{
   color: #6ac4cc;
@@ -43,10 +45,10 @@ nav a:hover{
   background-position: 50% 4px;
 }
 
-@media (max-width:990px) {
-  header {
+@media (max-width:1004px) {
+  /*header {
     height: 50px;
-  }
+  }*/
   nav {
     display: none;
   }

@@ -2,7 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Hompage</title>
+  <title>Trang chủ Chung Kết Thế Giới LMHT 2017</title>
+  <link rel="icon" href="src/images/nav/icon-web.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -10,7 +11,13 @@
   body {
     background-color: black;
   }
+
+  @keyframes appear {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
   .background {
+
     position: fixed;
     top:50%;
     left:50%;
@@ -22,11 +29,13 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
+
+    animation: appear 2s;
   }
 
   .logo {
     width:10%;
-    margin-top:100px;
+    margin-top:50px;
     transition: width .5s;
   }
   .logo:hover {
@@ -40,6 +49,11 @@
     padding-right: 10%;
     text-align: center;
   }
+
+  @keyframes attention {
+    from { font-size: 40px; }
+    to { font-size: 30px; }
+  }
   .content h3 p {
     cursor:default;
     color: silver;
@@ -50,6 +64,7 @@
     border-bottom: 1px solid silver;
     display: inline-block;
     transition: font-size .5s;
+    animation: attention 2s;
   }
   .content h3 p:hover {
     font-size: 35px;
@@ -72,9 +87,14 @@
     opacity: 1;
     background-image: radial-gradient(50% 50%,#5d5d5d,rgba(93,93,93,0));
   }
-  .btn{
-    background-color: transparent;
-    font-family: "Consolas";
+  .btn  {
+    margin-top: 30px;
+    background: transparent;
+    font-family: "Cambira", sans-serif;
+    font-size: 20px;
+    transition: background-color .5s;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   </style>
 </head>
@@ -85,40 +105,45 @@
     <div class="background content">
       <img src="src/images/hp-logo.png" class="logo" alt="">
       <h3>
-        <p><span>24 đội tuyển</span> đã có mặt tại <span>Chung Kết Thế Giới 2017</span></p>
+        <p><span>24 teams</span> have participated in <span>2017 World Championship</span></p>
       </h3>
       <div id="list"></div>
-      <a href="rule.html" type="button" class="btn btn-danger btn-lg" name="button" style="margin-top:20px;">Thể thức Chung Kết Thế Giới Mùa 7</a>
+      <div class="btn-group">
+        <a href="rule.html" type="button" class="btn btn-danger btn-lg" name="button">News</a>
+        <a href="team.html" type="button" class="btn btn-danger btn-lg" name="button">Teams</a>
+        <a href="contact.html" type="button" class="btn btn-danger btn-lg" name="button">Register</a>
+        <a href="about.html" type="button" class="btn btn-danger btn-lg" name="button">About</a>
+      </div>
     </div>
 
 
   <script>
   $(document).ready(function(){
     var contenttxt = [
-      ["#1 Seed from LCK",   "Longzhu Gaming",   "#", "src/images/teams/LZ.png"],
-      ["#1 Seed from LPL",   "EDward Gaming",    "#", "src/images/teams/EDG.png"],
-      ["#1 Seed from EULCS", "G2 Esports",       "#", "src/images/teams/G2.png"],
-      ["#1 Seed from LMS",   "Flash Wolves",     "#", "src/images/teams/FW.png"],
-      ["#2 Seed from LCK",   "SK Telecom T1",    "#", "src/images/teams/SKT.png"],
-      ["#3 Seed from LCK",   "Samsung Galaxy",   "#", "src/images/teams/SG.png"],
-      ["#2 Seed from LPL",   "Royal Never Give Up","#","src/images/teams/RNG.png"],
-      ["#1 Seed from NALCS", "Team Solomid",     "#", "src/images/teams/TSM-w.png"],
-      ["#2 Seed from NALCS", "Immortals",        "#", "src/images/teams/IMT.png"],
-      ["#2 Seed from EULCS", "Misfits",          "#", "src/images/teams/MF.png"],
-      ["#2 Seed from LMS", "ahq e-Sports Club",  "#", "src/images/teams/AHQ.png"],
-      ["#1 Seed from GPL", "GIGABYTE Marines",  "#", "src/images/teams/GM.png"],
-      ["Winner of Match A",  "Cloud9",           "#", "src/images/teams/C9.png"],
-      ["Winner of Match B",  "Fnatic",           "#", "src/images/teams/FNC.png"],
-      ["Winner of Match C",  "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png"],
-      ["Winner of Match D",  "Team WE",          "#", "src/images/teams/WE.png"],
-      ["#3 Seed from LMS",    "HK Attitude",      "#", "src/images/teams/HKA.png"],
-      ["Winner of CBLoL",     "Team oNe eSports", "#", "src/images/teams/TOE.png"],
-      ["Winner of LJL",       "Rampage",          "#", "src/images/teams/RMP.png"],
-      ["Winner of OPL",       "LG Dire Wolves",   "#", "src/images/teams/DW.png"],
-      ["#2 Seed GPL",         "Young Generation", "#", "src/images/teams/YG.png"],
-      ["Winner of LCL",       "Gambit.CIS",       "#", "src/images/teams/G-CIS.png"],
-      ["Winner of CLS",       "Kaos Latin Gamers","#", "src/images/teams/KLG.png"],
-      ["Winner of LLN",       "Lyon Gaming",      "#", "src/images/teams/LG.png"],
+      ["#1 Seed from LCK",   "Longzhu Gaming",   "team.html#LZ", "src/images/teams/LZ.png"],
+      ["#1 Seed from LPL",   "EDward Gaming",    "team.html#EDG", "src/images/teams/EDG.png"],
+      ["#1 Seed from EULCS", "G2 Esports",       "team.html#G2", "src/images/teams/G2.png"],
+      ["#1 Seed from LMS",   "Flash Wolves",     "team.html#FW", "src/images/teams/FW.png"],
+      ["#2 Seed from LCK",   "SK Telecom T1",    "team.html#SKT", "src/images/teams/SKT.png"],
+      ["#3 Seed from LCK",   "Samsung Galaxy",   "team.html#SG", "src/images/teams/SG.png"],
+      ["#2 Seed from LPL",   "Royal Never Give Up","team.html#RNG","src/images/teams/RNG.png"],
+      ["#1 Seed from NALCS", "Team Solomid",     "team.html#TSM", "src/images/teams/TSM-w.png"],
+      ["#2 Seed from NALCS", "Immortals",        "team.html#IMT", "src/images/teams/IMT.png"],
+      ["#2 Seed from EULCS", "Misfits",          "team.html#MF", "src/images/teams/MF.png"],
+      ["#2 Seed from LMS", "ahq e-Sports Club",  "team.html#AHQ", "src/images/teams/AHQ.png"],
+      ["#1 Seed from GPL", "GIGABYTE Marines",  "team.html#GAM", "src/images/teams/GM.png"],
+      ["Winner of Match A",  "Cloud9",           "team.html#C9", "src/images/teams/C9.png"],
+      ["Winner of Match B",  "Fnatic",           "team.html#FNC", "src/images/teams/FNC.png"],
+      ["Winner of Match C",  "1907 Fenerbahçe",  "team.html#1907F", "src/images/teams/1907F.png"],
+      ["Winner of Match D",  "Team WE",          "team.html#WE", "src/images/teams/WE.png"],
+      ["#3 Seed from LMS",    "HK Attitude",      "team.html#HKA", "src/images/teams/HKA.png"],
+      ["Winner of CBLoL",     "Team oNe eSports", "team.html#TOE", "src/images/teams/TOE.png"],
+      ["Winner of LJL",       "Rampage",          "team.html#RMP", "src/images/teams/RMP.png"],
+      ["Winner of OPL",       "LG Dire Wolves",   "team.html#DW", "src/images/teams/DW.png"],
+      ["#2 Seed GPL",         "Young Generation", "team.html#YG", "src/images/teams/YG.png"],
+      ["Winner of LCL",       "Gambit.CIS",       "team.html#G-CIS", "src/images/teams/G-CIS.png"],
+      ["Winner of CLS",       "Kaos Latin Gamers","team.html#KLG", "src/images/teams/KLG.png"],
+      ["Winner of LLN",       "Lyon Gaming",      "team.html#LG", "src/images/teams/LG.png"],
     ];
     for (var i = 0; i < contenttxt.length; i++) {
       var tagnameA = document.createElement("a");

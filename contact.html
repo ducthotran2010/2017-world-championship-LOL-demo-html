@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2017 World Championship Register | LOL Esports</title>
+  <link rel="icon" href="src/images/nav/icon-web.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="src/js/bootstrap.min.js"></script>
+
+  <style>
+  body {
+    position: relative;
+    background: url(src/images/bg-slider/bg-contact.jpg) no-repeat center;
+    background-color: black;
+    font-family: "Times New Roman",serif,"Adobe Garamond Pro",Garamond,Baskerville,"Baskerville Old Face","Hoefler Text";
+  }
+
+  /*-----------------------------------*/
+  header {
+    height: 50px;
+  }
+  .header-nav {
+    margin-top: 0;
+    height: 40px;
+    background-color: black;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    position: relative;
+    font-family: "Cambria";
+  }
+
+  .header-nav a {
+    display: inline-block;
+    /*text-align: center;*/
+    /*margin: 5px;*/
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    margin: auto 10px;
+    color: #c9aa71;
+    /*font-family: "";,Georgia", "Verdana", "Cambria";*/
+    text-decoration: none;
+  }
+  .header-nav a:hover {
+    color: #c1aa71;
+  }
+  .header-nav .active, .header-nav .active:hover {
+    color: white;
+    border-bottom: 2px solid #c9aa71;
+  }
+  @media (max-width: 768px) {
+    header {
+      height: 200px;
+    }
+    .header-nav {
+      height: 192px;
+    }
+    .header-nav a {
+      display: block;
+    }
+  }
+  marquee {
+    margin: 0;
+    color: #c9aa71;
+    font-weight: bold;
+    background-color: black;
+    font-size: 24px;
+    padding: 5px;
+    /*font-family: "";*/
+    /*border-bottom: 5px outset #c9aa71;*/
+  }
+  marquee:hover {
+    color: #c1aa71;
+    cursor: not-allowed;
+  }
+  .container-custom {
+    margin: auto auto;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+
+    background-color: black;
+    text-align: center;
+    border: 1px solid #785a28;
+    border-top: 3px solid #ad843f;
+    color: white;
+    font-family: "Cambria";
+  }
+
+  .container-custom h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .container-custom p {
+    color: #888;
+    /*text-align: left;*/
+    padding: 15px;
+    padding-bottom: 0px;
+    /*text-transform: uppercase;*/
+    /*font-weight: bold;*/
+  }
+  .container-custom table {
+    margin: 10px auto;
+  }
+  .container-custom table tr td {
+    text-align: left;
+    color: silver;
+    font-size: 14px;
+    /*padding: 1px;*/
+  }
+  .container-custom input {
+    border: 1px solid #785a28;
+    background-color: #1e2328;
+    /*max-width: 500px;*/
+    width: 340px;
+    padding: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    /*box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset, 0 0 0 1px rgba(0,0,0,0.25);*/
+    font-size: 16px;
+    color: #f0e6d2;
+  }
+  .btn-primary {
+    border-radius: 0;
+    text-transform: uppercase;
+
+    border: 2px solid transparent;
+    border-image: linear-gradient(to top, #0d404c 0%, #0596aa 44%, #0596aa 93%, #0ac8b9 100%);
+    border-image-slice: 1;
+    color: #cdfafa;
+    letter-spacing: 2px;
+    background: #1e2328;
+    font-size: 18px;
+    max-width: 340px;
+
+    margin: auto;
+
+  }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    background: #1e2328;
+  }
+
+  .container {
+    margin: 30px auto;
+    margin-top: 50px;
+  }
+
+  .container img {
+    width: 100%;
+    max-width: 225px;
+    /*border: 1px solid red*/
+  }
+  .container-custom p b {
+    font-size: 17px;
+    cursor: help;
+    color: #a71919;
+  }
+  /*---------LINK DICTIONARY-------------*/
+  .container h2, .container h5 a {
+    color: #dedede;
+    text-shadow: 0px 0px 20px black,0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black;
+    display: inline-block;
+    cursor: default;
+    margin: 0px;
+  }
+  /*.container h2:hover, */
+  .container h5 a:hover {
+
+    cursor: pointer;
+    font-weight: bold;
+    /*font-size: 40px;*/
+    color: #dedede;
+    text-decoration: none;
+  }
+
+  /*----------TAG H3-----------*/
+  /*----------TITLE----------*/
+  .banner h2 {
+    position: absolute;
+    /*left: -34px;*/
+    bottom: -10px;-35px;
+    display: inline-block;
+    color: white;
+    background-color: black;
+    /*background-color: rgb(222, 222, 222);*/
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1;
+    border-top: 3px solid #8D7643;
+    /*border-bottom: 3px solid #8D7643;*/
+    border-right: 3px solid #8D7643;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Cambria";
+    cursor: pointer;
+  }
+  .fa {
+    font-size: 25px;
+    cursor: pointer;
+    transition: font-size .5s;
+  }
+  .fa:hover {
+    font-size: 30px;
+  }
+  .main-content p {
+    font-size: 16px;
+  }
+  .main-content h3 {
+    display: inline-block;
+  }
+
+  .text {
+    margin: 30px 5px;
+  }
+
+
+  /* ------------------------ CONTENT--------------------*/
+  .main-content {
+    margin: 0px auto;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+  }
+
+  .footer {
+    /*padding-top: 150px;*/
+    color: white;
+    height: 300px;
+    text-align: center;
+  }
+  </style>
+  <link rel="stylesheet" href="src/css/fade-slider.css">
+  <link rel="stylesheet" href="src/css/navbar.css">
+  <link rel="stylesheet" href="src/css/border.css">
+
+</head>
+<body>
+      <header>
+        <!-- <marquee scrollamount="15"onmouseover="this.stop();" onmouseout="this.start();">VÒNG BẢNG CHUNG KẾT THẾ GIỚI 2017 ĐANG DIỄN RA</marquee> -->
+        <div class="header-nav">
+          <img src="src/images/logo.png" style="position: absolute; left: 0; top: 0;"alt="">
+          <a href="index.html">HOME</a>
+          <a href="rule.html">NEWS</a>
+          <a href="team.html">TEAMS</a>
+          <a class="active" onclick="location.reload();" href="">CONTACT</a>
+          <a href="about.html">ABOUT</a>
+        </div>
+      </header>
+
+      <div class="container">
+        <img src="src/images/hp-logo-main.png" width="225px" alt="">
+        <h5>
+          <a href="index.html">
+            HOME >
+          </a>
+        </h5>
+        <h2>
+          2017 World Championship Contact | LOL Esports
+        </h2>
+      </div>
+
+      <div class="container">
+        <!-- <img src="src/images/hp-logo-main.png" alt=""> -->
+      </div>
+
+      <div class="container-custom">
+          <div class="main-content">
+            <h3>Sign up for alert</h3>
+            <br>
+            <p>Please leave your email and <b>Garena</b> username account so we can notify about <b>World Championship 2017's news</b></p>
+            <br>
+            <table>
+            <tr>
+              <td>Email</td>
+            </tr>
+            <tr>
+              <td><input type="text" name="email" value="" autofocus></td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>Username</td>
+            </tr>
+            <tr>
+              <td><input type="text" name="username" value=""></td>
+            </tr>
+          </table>
+          <p></p>
+          <button type="submit" class="btn btn-primary btn-block" id="login-button">Sign Up</button>
+          </div>
+      </div>
+
+      <div class="footer">
+        - this is footer -
+      </div>
+  </div>
+
+</body>
+</html>

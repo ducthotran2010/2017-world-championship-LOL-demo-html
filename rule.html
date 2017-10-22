@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>2017 Thể Thức Chung Kết Thế Giới</title>
+  <title>2017 World Championship Rules | LOL Esports</title>
   <link rel="icon" href="src/images/nav/icon-web.png">
 
   <meta charset="utf-8">
@@ -11,9 +11,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="src/js/bootstrap.min.js"></script>
 
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
   <style>
   .parallax {
     perspective: 1px;
@@ -41,17 +38,60 @@
     font-family: "Times New Roman",serif,"Adobe Garamond Pro",Garamond,Baskerville,"Baskerville Old Face","Hoefler Text";
   }
 
-  header {height: 200px;}
-
   /*-----------------------------------*/
+  header {
+    height: 200px;
+  }
+
+  .header-nav {
+    margin-top: 0;
+    height: 40px;
+    background-color: black;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    position: relative;
+    font-family: "Cambria";
+  }
+
+  .header-nav a {
+    display: inline-block;
+    /*text-align: center;*/
+    /*margin: 5px;*/
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    margin: auto 10px;
+    color: #c9aa71;
+    /*font-family: "";,Georgia", "Verdana", "Cambria";*/
+    text-decoration: none;
+  }
+  .header-nav a:hover {
+    color: #c1aa71;
+  }
+  .header-nav .active, .header-nav .active:hover {
+    color: white;
+    border-bottom: 2px solid #c9aa71;
+  }
+  @media (max-width: 768px) {
+    header {
+      height: 200px;
+    }
+    .header-nav {
+      height: 192px;
+    }
+    .header-nav a {
+      display: block;
+    }
+  }
   marquee {
+    margin: 0;
     color: #c9aa71;
     font-weight: bold;
     background-color: black;
     font-size: 24px;
     padding: 5px;
     /*font-family: "";*/
-    border-bottom: 5px outset #c9aa71;
+    /*border-bottom: 5px outset #c9aa71;*/
   }
   marquee:hover {
     color: #c1aa71;
@@ -71,12 +111,17 @@
   /*---------LINK DICTIONARY-------------*/
   .container h2, .container h5 a {
     color: #dedede;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7), -1px -1px 4px rgba(0,0,0,0.5);
+    text-shadow: 0px 0px 20px black,0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black;
     display: inline-block;
+    /*transition: font-size .5s;*/
+    cursor: default;
   }
-  .container h2:hover, .container h5 a:hover {
+  /*.container h2:hover, */
+  .container h5 a:hover {
+
     cursor: pointer;
     font-weight: bold;
+    /*font-size: 40px;*/
     color: #dedede;
     text-decoration: none;
   }
@@ -114,6 +159,10 @@
     height: 100%;
     max-width: 100px;
     max-height: 100px;
+  }
+  h3 i {
+    transition: font-size .5s;
+
   }
   h3 i:hover {
     /*font-weight: bold;*/
@@ -230,6 +279,13 @@
     height: 300px;
     text-align: center;
   }
+  iframe {
+    height: 300px;
+    max-width: 490px;
+    width: 50%;
+    /*display: inline-block;*/
+    /*margin: 0 auto;*/
+  }
   </style>
   <link rel="stylesheet" href="src/css/fade-slider.css">
   <link rel="stylesheet" href="src/css/navbar.css">
@@ -240,22 +296,51 @@
 <body>
   <div class="parallax">
     <div class="parallax__layer parallax__layer--back">
-      <!-- this is background. -->
-      <img src="src/images/bg-default.jpg" width="199%" style="position:absolute;left:-50%;top:-50%;"alt="">
-      <img src="src/images/bg-inf.jpg" width="199%" style="position:absolute;left:-50%;top: 200%;" alt="">
-      <img src="src/images/bg-inf2.jpg" width="199%" style="position:absolute;left:-50%;top: 400%;" alt="">
+      <div id="myCarousel" class="carousel slide carousel-fade" data-interval="5000" style="width:199%;left:-50%;top:-50%;">
+        <div class="carousel-inner">
+          <div class="active item">
+            <!-- <img src="src/images/bg-slider/bg-default.jpg" width="199%" style="position:absolute;left:-50%;top:-50%;"alt=""> -->
+            <img src="src/images/bg-slider/bg-default.jpg" width="100%" alt="">
+          </div>
+          <div class="item">
+            <img src="src/images/bg-slider/bg-slider-2.jpg" width="100%" alt="">
+          </div>
+          <div class="item">
+            <img src="src/images/bg-slider/bg-slider-3.jpg" width="100%" alt="">
+          </div>
+          <div class="item">
+            <img src="src/images/bg-slider/bg-slider-4.jpg" width="100%" alt="">
+          </div>
+          <div class="item">
+            <img src="src/images/bg-slider/bg-slider-5.jpg" width="100%" alt="">
+          </div>
+        </div>
+      </div>
+      <script>
+        $('#myCarousel').carousel();
+      </script>
+      <!-- <img src="src/images/bg-slider/bg-default.jpg" width="199%" style="position:absolute;left:-50%;top:-50%;"alt=""> -->
+      <img src="src/images/bg-slider/bg-inf.jpg" width="199%" style="position:absolute;left:-50%;top: 400%;" alt="">
+      <img src="src/images/bg-slider/bg-inf2.jpg" width="199%" style="position:absolute;left:-50%;top: 800%;" alt="">
     </div>
     <div class="parallax__layer parallax__layer--base">
       <header>
-        <marquee scrollamount="15"onmouseover="this.stop();" onmouseout="this.start();">VÒNG BẢNG CHUNG KẾT THẾ GIỚI 2017 ĐANG DIỄN RA</marquee>
+        <!-- <marquee scrollamount="15"onmouseover="this.stop();" onmouseout="this.start();">VÒNG BẢNG CHUNG KẾT THẾ GIỚI 2017 ĐANG DIỄN RA</marquee> -->
+        <div class="header-nav">
+          <img src="src/images/logo.png" style="position: absolute; left: 0; top: 0;"alt="">
+          <a href="index.html">HOME</a>
+          <a class="active" onclick="location.reload();" href="">NEWS</a>
+          <a href="team.html">TEAMS</a>
+          <a href="contact.html">CONTACT</a>
+          <a href="about.html">ABOUT</a>
+        </div>
       </header>
-
       <nav>
         <div class="navbar-background"></div>
         <ul>
-          <li><a href="#play-in-stage">Vòng khởi động</a></li>
-          <li><a href="#group-stage">Vòng bảng</a></li>
-          <li><a href="#winners-stage">Vòng loại trực tiếp</a></li>
+          <li><a href="#play-in-stage">Play-In Stage</a></li>
+          <li><a href="#group-stage">Group Stage</a></li>
+          <li><a href="#winners-stage">Knockout Stage</a></li>
         </ul>
       </nav>
 
@@ -265,8 +350,8 @@
             HOME >
           </a>
         </h5>
-        <h2 onclick="location.reload();">
-          Thể thức Chung Kết Thế Giới 2017</a>
+        <h2>
+          2017 World Championship Rules | LOL Esports
         </h2>
       </div>
 
@@ -297,21 +382,28 @@
                 <span>Kết quả</span>
                 <i class="fa fa-eye-slash" onclick="toShowOrHide('box-team-playin-results1');toShowOrHide('box-team-playin-results2')" aria-hidden="true"></i>
               </h3>
-              <h4>Giai đoạn 1
-                <i class="fa fa-eye-slash" onclick="toShowOrHide('box-team-playin-results1');" aria-hidden="true"></i>
-              </h4>
-              <div class="box-team" id="box-team-playin-results1"></div>
+              <div class="box-team" id="box-team-playin-results1">
+                <h4 style="text-align:right">Giai đoạn 1</h4>
+              </div>
               <hr>
-              <h4>Giai đoạn 2
-                <i class="fa fa-eye-slash" onclick="toShowOrHide('box-team-playin-results2');" aria-hidden="true"></i>
-              </h4>
-              <div class="box-team" id="box-team-playin-results2"></div>
+              <div class="box-team" id="box-team-playin-results2">
+                <h4 style="text-align:right">Giai đoạn 2</h4>
+              </div>
 
               <h3>
                 <span>Các đội chiến thắng vòng khởi động</span>
                 <i class="fa fa-eye-slash" onclick="toShowOrHide('box-team-winners-playin')" aria-hidden="true"></i>
               </h3>
               <div class="box-team" id="box-team-winners-playin"></div>
+
+              <h3>
+                <span>2017 Worlds Play in Stage Highlights</span>
+                <i class="fa fa-eye-slash" onclick="toShowOrHide('playin-highlights')" aria-hidden="true"></i>
+              </h3>
+              <div id="playin-highlights" style="text-align:center">
+                <iframe src="https://www.youtube.com/embed/TRCtt6coGfs" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/5kB2vB1yg60" frameborder="0" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
           <div class="section-wrapper-bottom"></div>
@@ -325,7 +417,7 @@
 
           <div class="section-wrapper-content">
 
-            <div class="banner" style="background: url(src/images/banner/banner-4.jpg) no-repeat top;background-size:contain;background-color: black;">
+            <div class="banner" style="background: url(src/images/banner/banner-4.jpg) no-repeat top;background-size:cover;background-color: black;">
               <h1 class="header-text" data-text="VÒNG BẢNG">VÒNG BẢNG</h1>
             </div>
 
@@ -353,15 +445,23 @@
                 <span>Kết quả</span>
                 <i class="fa fa-eye-slash" onclick="toShowOrHide('box-team-group-stage-results-1');toShowOrHide('box-team-group-stage-results-2')" aria-hidden="true"></i>
               </h3>
-              <h4>Giai đoạn 1
+              <!-- <h4>Giai đoạn 1
                 <i class="fa fa-eye-slash" onclick="toShowOrHide('box-team-group-stage-results-1');" aria-hidden="true"></i>
-              </h4>
+              </h4> -->
               <div class="box-team" id="box-team-group-stage-results-1"></div>
-              <hr>
+              <!-- <hr>
               <h4>Giai đoạn 2
                 <i class="fa fa-eye-slash" onclick="toShowOrHide('box-team-group-stage-results-2')" aria-hidden="true"></i>
               </h4>
-              <div class="box-team" id="box-team-group-stage-results-2"></div>
+              <div class="box-team" id="box-team-group-stage-results-2"></div> -->
+              <h3>
+                <span>2017 Worlds Group Stage Highlights</span>
+                <i class="fa fa-eye-slash" onclick="toShowOrHide('groupstage-highlights')" aria-hidden="true"></i>
+              </h3>
+              <div id="groupstage-highlights" style="text-align:center">
+                <iframe src="https://www.youtube.com/embed/fwkVAs-tNCw" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/Sj2cVUzgbzs" frameborder="0" allowfullscreen></iframe>
+              </div>
             </div>
           </div>
           <div class="section-wrapper-bottom"></div>
@@ -372,7 +472,7 @@
         <div id="winners-stage">
           <div class="section-wrapper-top"></div>
           <div class="section-wrapper-content">
-            <div class="banner" style="background: url(src/images/banner/banner-1.jpg) no-repeat right;background-size:contain;background-color: black;">
+            <div class="banner" style="background: url(src/images/banner/banner-1.jpg) no-repeat 0% 0px;background-size:cover;background-color: black;">
               <h1 class="header-text" data-text="VÒNG LOẠI TRỰC TIẾP">VÒNG LOẠI TRỰC TIẾP</h1>
             </div>
 
@@ -409,27 +509,27 @@
 
 <script>
   function toShowOrHide(idName) {
-    $("#" + idName).slideToggle(1000);
+    $("#" + idName).slideToggle(500);
   }
 
   $(document).ready(function(){
     var contenttxt = [
       ["Nhóm A"],
-      ["1", "Team WE",          "#", "src/images/teams/WE.png","4-0"],
-      ["2", "Lyon Gaming",      "#", "src/images/teams/LG.png","2-2"],
-      ["3", "Gambit.CIS",       "#", "src/images/teams/G-CIS.png","0-4"],
+      ["1", "Team WE",          "team.html#WE", "src/images/teams/WE.png","4-0"],
+      ["2", "Lyon Gaming",      "team.html#LG", "src/images/teams/LG.png","2-2"],
+      ["3", "Gambit.CIS",       "team.html#G-CIS", "src/images/teams/G-CIS.png","0-4"],
       ["Nhóm B"],
-      ["1", "Cloud9",           "#", "src/images/teams/C9.png","4-0"],
-      ["2", "Team oNe eSports", "#", "src/images/teams/TOE.png","2-3"],
-      ["3", "LG Dire Wolves",   "#", "src/images/teams/DW.png","1-4"],
+      ["1", "Cloud9",           "team.html#C9", "src/images/teams/C9.png","4-0"],
+      ["2", "Team oNe eSports", "team.html#TOE", "src/images/teams/TOE.png","2-3"],
+      ["3", "LG Dire Wolves",   "team.html#DW", "src/images/teams/DW.png","1-4"],
       ["Nhóm C"],
-      ["1", "Fnatic",           "#", "src/images/teams/FNC.png","3-1"],
-      ["2", "Young Generation", "#", "src/images/teams/YG.png","2-2"],
-      ["3", "Kaos Latin Gamers","#", "src/images/teams/KLG.png","1-3"],
+      ["1", "Fnatic",           "team.html#FNC", "src/images/teams/FNC.png","3-1"],
+      ["2", "Young Generation", "team.html#YG", "src/images/teams/YG.png","2-2"],
+      ["3", "Kaos Latin Gamers","team.html#KLG", "src/images/teams/KLG.png","1-3"],
       ["Nhóm D"],
-      ["1", "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png","4-1"],
-      ["2", "HK Attitude",      "#", "src/images/teams/HKA.png","3-2"],
-      ["3", "Kaos Latin Gamers","#", "src/images/teams/KLG.png","0-4"],
+      ["1", "1907 Fenerbahçe",  "team.html#1907F", "src/images/teams/1907F.png","4-1"],
+      ["2", "HK Attitude",      "team.html#HKA", "src/images/teams/HKA.png","3-2"],
+      ["3", "Kaos Latin Gamers","team.html#KLG", "src/images/teams/KLG.png","0-4"],
     ];
     var iTable = document.createElement("table");
     iTable.className = "table";
@@ -490,17 +590,17 @@
   $(document).ready(function(){
     var contenttxt = [
       ["Cặp đấu A"],
-      ["1", "Cloud9",           "#", "src/images/teams/C9.png","3-0"],
-      ["2", "Lyon Gaming",      "#", "src/images/teams/LG.png","0-3"],
+      ["1", "Cloud9",           "team.html#C9", "src/images/teams/C9.png","3-0"],
+      ["2", "Lyon Gaming",      "team.html#LG", "src/images/teams/LG.png","0-3"],
       ["Cặp đấu B"],
-      ["1", "Fnatic",           "#", "src/images/teams/FNC.png","3-0"],
-      ["2", "HK Attitude",      "#", "src/images/teams/HKA.png","0-3"],
+      ["1", "Fnatic",           "team.html#FNC", "src/images/teams/FNC.png","3-0"],
+      ["2", "HK Attitude",      "team.html#HKA", "src/images/teams/HKA.png","0-3"],
       ["Cặp đấu C"],
-      ["1", "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png","3-1"],
-      ["2", "Team oNe eSports", "#", "src/images/teams/TOE.png","1-3"],
+      ["1", "1907 Fenerbahçe",  "team.html#1907F", "src/images/teams/1907F.png","3-1"],
+      ["2", "Team oNe eSports", "team.html#TOE", "src/images/teams/TOE.png","1-3"],
       ["Cặp đấu D"],
-      ["1", "Team WE",          "#", "src/images/teams/WE.png","3-0"],
-      ["2", "Young Generation", "#", "src/images/teams/YG.png","0-3"],
+      ["1", "Team WE",          "team.html#WE", "src/images/teams/WE.png","3-0"],
+      ["2", "Young Generation", "team.html#YG", "src/images/teams/YG.png","0-3"],
     ];
     var iTable = document.createElement("table");
     iTable.className = "table";
@@ -560,25 +660,25 @@
   $(document).ready(function(){
     var contenttxt = [
       ["Nhóm A"],
-      ["1", "SK Telecom T1",    "#", "src/images/teams/SKT.png","3-0"],
-      ["2", "Cloud9",           "#", "src/images/teams/C9.png","2-1"],
-      ["3", "ahq e-Sports Club","#", "src/images/teams/AHQ.png","1-2"],
-      ["4", "EDward Gaming",    "#", "src/images/teams/EDG.png","0-3"],
+      ["1", "SK Telecom T1",    "team.html#SKT", "src/images/teams/SKT.png","3-0"],
+      ["2", "Cloud9",           "team.html#C9", "src/images/teams/C9.png","2-1"],
+      ["3", "ahq e-Sports Club","team.html#AHQ", "src/images/teams/AHQ.png","1-2"],
+      ["4", "EDward Gaming",    "team.html#EDG", "src/images/teams/EDG.png","0-3"],
       ["Nhóm B"],
-      ["1", "Longzhu Gaming",   "#", "src/images/teams/LZ.png","3-0"],
-      ["2", "Immortals",        "#", "src/images/teams/IMT.png","2-1"],
-      ["3", "GIGABYTE Marines",  "#", "src/images/teams/GM.png","1-2"],
-      ["4", "Fnatic",           "#", "src/images/teams/FNC.png","0-3"],
+      ["1", "Longzhu Gaming",   "team.html#LZ", "src/images/teams/LZ.png","3-0"],
+      ["2", "Immortals",        "team.html#IMT", "src/images/teams/IMT.png","2-1"],
+      ["3", "GIGABYTE Marines",  "team.html#GAM", "src/images/teams/GM.png","1-2"],
+      ["4", "Fnatic",           "team.html#FNC", "src/images/teams/FNC.png","0-3"],
       ["Nhóm C"],
-      ["1", "Royal Never Give Up","#","src/images/teams/RNG.png","3-0"],
-      ["2", "Samsung Galaxy",   "#", "src/images/teams/SG.png","2-1"],
-      ["3", "G2 Esports",       "#", "src/images/teams/G2.png","1-2"],
-      ["4", "1907 Fenerbahçe",  "#", "src/images/teams/1907F.png","0-3"],
+      ["1", "Royal Never Give Up","team.html#RNG","src/images/teams/RNG.png","3-0"],
+      ["2", "Samsung Galaxy",   "team.html#SG", "src/images/teams/SG.png","2-1"],
+      ["3", "G2 Esports",       "team.html#G2", "src/images/teams/G2.png","1-2"],
+      ["4", "1907 Fenerbahçe",  "team.html#1907F", "src/images/teams/1907F.png","0-3"],
       ["Nhóm D"],
-      ["1", "Team Solomid",     "#", "src/images/teams/TSM.png","2-1"],
-      ["2", "Team WE",          "#", "src/images/teams/WE.png","2-1"],
-      ["3", "Misfits",          "#", "src/images/teams/MF.png","2-1"],
-      ["4", "Flash Wolves",     "#", "src/images/teams/FW.png","0-3"],
+      ["1", "Team Solomid",     "team.html#TSM", "src/images/teams/TSM.png","2-1"],
+      ["2", "Team WE",          "team.html#WE", "src/images/teams/WE.png","2-1"],
+      ["3", "Misfits",          "team.html#MF", "src/images/teams/MF.png","2-1"],
+      ["4", "Flash Wolves",     "team.html#FW", "src/images/teams/FW.png","0-3"],
     ];
     var iTable = document.createElement("table");
     iTable.className = "table";

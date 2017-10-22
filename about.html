@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2017 World Championship Teams | LOL Esports</title>
+  <link rel="icon" href="src/images/nav/icon-web.png">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="src/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="src/js/bootstrap.min.js"></script>
+
+  <style>
+  html {
+    z-index: -100;
+    background: url(src/images/bg-slider/bg-about.jpg) no-repeat top center;
+    background-size: cover;
+  }
+  body {
+    position: relative;
+    background: transparent;
+    font-family: "Times New Roman",serif,"Adobe Garamond Pro",Garamond,Baskerville,"Baskerville Old Face","Hoefler Text";
+  }
+
+  /*-----------------------------------*/
+  header {
+    height: 50px;
+  }
+  .header-nav {
+    margin-top: 0;
+    height: 40px;
+    background-color: black;
+    border-bottom: 2px solid #333;
+    text-align: center;
+    position: relative;
+    font-family: "Cambria";
+  }
+
+  .header-nav a {
+    display: inline-block;
+    /*text-align: center;*/
+    /*margin: 5px;*/
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px;
+    margin: auto 10px;
+    color: #c9aa71;
+    /*font-family: "";,Georgia", "Verdana", "Cambria";*/
+    text-decoration: none;
+  }
+  .header-nav a:hover {
+    color: #c1aa71;
+  }
+  .header-nav .active, .header-nav .active:hover {
+    color: white;
+    border-bottom: 2px solid #c9aa71;
+  }
+  @media (max-width: 768px) {
+    header {
+      height: 200px;
+    }
+    .header-nav {
+      height: 192px;
+    }
+    .header-nav a {
+      display: block;
+    }
+  }
+  marquee {
+    margin: 0;
+    color: #c9aa71;
+    font-weight: bold;
+    background-color: black;
+    font-size: 24px;
+    padding: 5px;
+    /*font-family: "";*/
+    /*border-bottom: 5px outset #c9aa71;*/
+  }
+  marquee:hover {
+    color: #c1aa71;
+    cursor: not-allowed;
+  }
+  .container-custom {
+    margin: auto auto;
+    max-width: 1140px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 250px;
+  }
+  .container {
+    margin: 70px auto;
+    margin-top: 50px;
+  }
+
+  /*---------LINK DICTIONARY-------------*/
+  .container h2, .container h5 a {
+    color: #dedede;
+    text-shadow: 0px 0px 20px black,0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black, 0px 0px 20px black;
+    display: inline-block;
+    cursor: default;
+    margin: 0px;
+  }
+  .container h5 a:hover {
+
+    cursor: pointer;
+    font-weight: bold;
+    color: #dedede;
+    text-decoration: none;
+  }
+
+  /*----------TAG H3-----------*/
+  /*----------TITLE----------*/
+  .banner h2 {
+    position: absolute;
+    /*left: -34px;*/
+    bottom: -10px;-35px;
+    display: inline-block;
+    color: white;
+    background-color: black;
+    /*background-color: rgb(222, 222, 222);*/
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1;
+    border-top: 3px solid #8D7643;
+    /*border-bottom: 3px solid #8D7643;*/
+    border-right: 3px solid #8D7643;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Cambria";
+    cursor: pointer;
+  }
+  .fa {
+    font-size: 25px;
+    cursor: pointer;
+    transition: font-size .5s;
+  }
+  .fa:hover {
+    font-size: 30px;
+  }
+  .main-content p {
+    font-size: 16px;
+  }
+  .main-content h3 {
+    display: inline-block;
+  }
+
+  .main-content {
+    margin: 0px auto;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+  }
+
+  .footer {
+    padding-top: 150px;
+    color: white;
+    height: 300px;
+    text-align: center;
+  }
+
+  .main-content img {
+    display: inline-block;
+    max-width: 100px;
+    max-height: 100px;
+  }
+  .main-content span {
+    font-size: 30px;
+  }
+  .main-content h2 {
+    color: white;
+    background: black url(src/images/border/lol-textures.jpg) no-repeat 0 -6px;
+    padding: 10px;
+    margin: 5px;
+    /*margin-bottom: 0px;*/
+  }
+  .content-border {
+    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    border-left: 1px solid rgba(84, 84, 84, 0.3);
+    border-top: 1px solid rgba(84, 84, 84, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  .text {
+    margin: 0px;
+    padding: 10px;
+  }
+  .text p,
+  .text a {
+    font-size: 18px;
+    text-align: justify;
+  }
+  .row h2 {text-align: center;}
+
+
+  </style>
+  <link rel="stylesheet" href="src/css/fade-slider.css">
+  <link rel="stylesheet" href="src/css/navbar.css">
+  <link rel="stylesheet" href="src/css/border.css">
+
+</head>
+<body>
+      <header>
+        <!-- <marquee scrollamount="15"onmouseover="this.stop();" onmouseout="this.start();">VÒNG BẢNG CHUNG KẾT THẾ GIỚI 2017 ĐANG DIỄN RA</marquee> -->
+        <div class="header-nav">
+          <img src="src/images/logo.png" style="position: absolute; left: 0; top: 0;"alt="">
+          <a href="index.html">HOME</a>
+          <a href="rule.html">NEWS</a>
+          <a href="team.html">TEAMS</a>
+          <a href="contact.html">CONTACT</a>
+          <a class="active" onclick="location.reload();" href="">ABOUT</a>
+        </div>
+      </header>
+
+      <div class="container">
+        <img src="src/images/hp-logo-main.png" width="225px" alt="">
+        <h5>
+          <a href="index.html">
+            HOME >
+          </a>
+        </h5>
+        <h2>
+          2017 World Championship About | LOL Esports
+        </h2>
+      </div>
+
+      <div class="container-custom">
+        <div class="section-wrapper-top"></div>
+        <div class="section-wrapper-content">
+          <div class="main-content">
+
+            <br>
+            <h1 style="text-transform:uppercase;text-align:center">about this site</h1>
+
+            <div class="content-border">
+              <h2>WHAT IS THIS?</h2>
+            </div>
+            <div class="text">
+              <p>This is a HTML site.<br>Main content is about the <b>2017 World Championship - League of legend</b>.</p>
+              <p>This site is used for learning purposes.<br>
+                Any copyright complaints please contact me via
+                <a href="mailto:ducthotran2010@gmail.com" target="_top">
+                  ducthotran2010@gmail.com</a>. I will take this site down if copyright infringement.</p>
+            </div>
+
+
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="content-border">
+                    <h2>POWERED BY</h2>
+                  </div>
+                  <div class="text" style="text-align:center">
+                    <a href="http://getbootstrap.com/"><img src="src/images/powered/bootstrap-stack.png" alt=""></a>
+                    <span>+</span>
+                    <a href="fontawesome.io/"><img src="src/images/powered/font-awesome-card.png" alt=""></a>
+                    <br>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="content-border">
+                    <h2>REFERENCES</h2>
+                  </div>
+                  <div class="text" style="height:100%">
+                    <a href="http://euw.leagueoflegends.com/en/legal/privacy">LOL Kit</a><br>
+                    <a href="https://www.w3schools.com/">W3Schools</a><br>
+                    <a href="https://stackoverflow.com/questions/tagged/html">Stack Overflow</a><br>
+                  </div>
+                </div>
+
+                <div class="col-md-5">
+                  <div class="content-border">
+                    <h2>RESOURCES</h2>
+                  </div>
+                  <div class="text">
+                    <a href="https://www.youtube.com/results?search_query=highlight+world+championship+lol+2017">Youtube | Highlight LOL</a><br>
+                    <a href="http://gameinfo.euw.leagueoflegends.com/en/game-info/">League of Legend | Game Info</a><br>
+                    <a href="https://lol.gamepedia.com/2017_World_Championship">2017 World Championship LOL | Result</a><br>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="content-border">
+                <h2>ABOUT ME</h2>
+              </div> -->
+
+            </div>
+
+        </div>
+
+        </div>
+        <div class="section-wrapper-bottom" style="height: 180px;background-position: 50% -322px;"></div>
+      </div>
+
+      <div class="footer">
+        - this is footer -
+      </div>
+
+</body>
+</html>
