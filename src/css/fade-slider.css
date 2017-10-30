@@ -21,3 +21,11 @@
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
+
+/*_______________________________________________________________________________________________________________________*/
+/*Chỉnh độ rộng cho khít với màn hình người dùng, vì slider-custom nằm trong class parallax__layer--back đã bị translateZ*/
+.slider-custom {
+  width: 199%;
+  left: -50%;
+  top: -50%;
+}
